@@ -7,8 +7,50 @@
     <title>Document</title>
 </head>
 <body>
+    
     <script>
- CCC
+        let finalResult ;
+
+        let evenOddResult;
+
+        // Add your code here
+
+        var var1 = 8;
+        var var2 = 8;
+        var var3 = 5;
+        var var4 = 8;
+
+        let suma = var1+var2;
+        let resta =  var4-var3;
+        finalResult = suma * resta;
+        evenOddResult = finalResult%2;
+        console.log('2. la suma de las dos primeras variables son: ' + suma);
+        console.log('3. Resta la cuarta variable de la tercera: ' + resta );
+        console.log('4. multiplicacion del resultado de la suma y de la resta: '+ finalResult);
+
+
+        if(evenOddResult ==0){
+            console.log('el resultado: '+finalResult + ' - el numero es par');
+        }else{
+            console.log('el resultado: '+finalResult + ' - el numero es impar');
+        }
+        // Don't edit the code below here!
+
+        let body = document.getElementsByTagName('body')[0];
+        let section = document.createElement('section');
+        section.innerHTML = ' ';
+        const para1 = document.createElement('p');
+        const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+        para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+        const para2 = document.createElement('p');
+        const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+        para2.textContent = evenOddResultCheck;
+
+        body.append(section);
+        section.appendChild(para1);
+        section.appendChild(para2);
+    
     </script>
+    
 </body>
 </html>
