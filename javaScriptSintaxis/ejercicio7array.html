@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = prompt('numero a intriducir');
+
+        let arr = [];
+        let suma = 0;
+        let suma2 =0;
+        let suma3 =0;
+
+        
+        for (let i = 0; i <= numero; i++) {
+          
+          arr.push(i);
+        }
+        console.log(arr);
+
+        /**
+         * FormA 1
+         */
+        /*for (let i = 0; i <= arr.length - 1; i++) {
+            suma += arr[i];
+            
+        }
+        console.log(suma);*/
+
+        /**
+         * forma 2
+         */ 
+        
+        /*for(let num in  arr){
+            suma2 += arr[num];
+            
+        }
+        console.log('suma : ' + suma2);*/
+
+        for(let num3 of  arr){
+            suma3 += arr[num3];
+            
+        }
+        console.log('suma3 : ' + suma3);
+
+    </script>
+</body>
+</html>
