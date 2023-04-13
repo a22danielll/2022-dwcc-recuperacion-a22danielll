@@ -10,11 +10,19 @@
     <script>
         let peso1=80;
         let peso2=60;
-        let altura1=160;
-        let altura2=150;
+        let altura1=1.60;
+        let altura2=1.50;
         /*imc = peso/altura*altura*/
-        let imc1 = peso / altura1;
+        let imc1 = peso1 / (altura1*altura1);
         console.log(imc1);
+        let imc2 = peso2 / (altura2*altura2);
+        console.log(imc2);
+
+        if(imc1 > imc2){
+            console.log('el imc1 es mayor que el imc2');
+        }else{
+            console.log('el imc2 es mayor que el imc1');
+        }
     </script>
 </body>
 </html>
