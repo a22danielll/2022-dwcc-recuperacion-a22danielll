@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let num=0;
+        let letra='';
+        let numeros = /[0-9]{8}/;
+        let letras = /[A-Z]{1}/;
+        function validacionDNI(num,letra){
+            
+            if(numeros.test(num)==true){
+                if(letras.test(letra)==true ){
+                    console.log("el dni es correcto");
+                }
+                else{
+                    console.log("el dni es incorrecto");
+                }
+            }else{
+                console.log('el dni es incorecto');
+            }
+        }
+
+        validacionDNI(44092112,'P');
+
+    </script>
+</body>
+</html>
