@@ -20,7 +20,9 @@
                 for (let x = 0; x < escenario[i].length; x++) {
                     if(escenario[i][x] == -1){
                         arraySalida[i][x] = -1;
-                        console.log(arraySalida[i][x]);
+                        
+                    }else{
+                        arraySalida[i][x] = 1;
                     }
                     
                 }
@@ -29,6 +31,13 @@
         }
 
         console.log(buscaMinas(arrayEntrada));
+
+
+        function buscar(escenario,x,i){
+            if(escenario[x][i]){
+
+            }
+        }
         
     </script>
 </body>
