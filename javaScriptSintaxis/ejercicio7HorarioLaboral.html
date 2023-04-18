@@ -13,6 +13,18 @@
         function axendarReunion(horaInicioReunion, duracionEnMinutos) {
         // A función debe devolver true se a reunión ocorre dentro da xornada laboral
         // e false en caso contrario
+        let horaInicial = inicioXornada.split(':');
+        let horarioFinal = finalXornada.split(':');
+        let horaInicial1 = horaInicial[0]*60;
+        let horaInicial2 = horaInicial[1];
+        let total = horaInicial1 + horaInicial2 + duracionEnMinutos;
+        
+        console.log('horaInicial: ' + horaInicial1 + ' horaInicial2: ' + horaInicial2 + ' Total: ' + total );
+        
+
+
+
+        
         }
         // Comprobacións
         console.assert(axendarReunion("7:00", 15) == false,
