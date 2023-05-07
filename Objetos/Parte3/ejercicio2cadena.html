@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeCharacters(cadena,caracterEliminado){
+            for (let i = 0; i < caracterEliminado.length; i++) {
+                cadena = cadena.replace(caracterEliminado[i],"");
+            }
+            return cadena
+        }
+
+        console.log(removeCharacters("I am an example string", ["a", "x"])); // I m n emple string
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function caracterMaisRepetido(cadena){
+            let contador = {};
+            let maxChar = "";
+            let maxcontador = 0;
+
+            for (let i = 0; i < cadena.length; i++) {
+                let char = cadena[i];
+                if (contador[char]) {
+                    contador[char]++;
+                } else {
+                    contador[char] = 1;
+                }
+                if (contador[char] > maxcontador) {
+                    maxChar = char;
+                    maxcontador = contador[char];
+                }
+            }
+            return maxChar;
+        }
+
+        console.log(caracterMaisRepetido("abcddefg")) // d
+    </script>
+</body>
+</html>
