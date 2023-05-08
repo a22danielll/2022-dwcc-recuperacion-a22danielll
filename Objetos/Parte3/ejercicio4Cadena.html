@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+    <script>
+        function enmascarar(cadena){
+            let cadena2 ="";
+            for (let i = 0; i < cadena.length -4; i++) {
+                cadena2 = cadena2 + '*';
+                
+            }
+            return cadena2+cadena.substring(cadena.length-4);
+        }
+        
+        console.log(enmascarar('1234123412347777')); // ************7777
+        
+    </script>
+    </h1>
+</body>
+</html>

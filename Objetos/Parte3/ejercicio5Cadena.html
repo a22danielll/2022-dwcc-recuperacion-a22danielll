@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const flightsInfo ="_Delayed_Departure;scq93766109;bio2133758440;11:25+_Arrival;bio0943384722;scq93766109;11:45+_Delayed_Arrival;svq7439299980;scq93766109;12:05+_Departure;scq93766109;svq2323639855;12:30";
+        
+        let info = flightsInfo.split('+_');
+
+        for(let cadena of info){
+            let [col1,col2,col3,col4]=cadena.split(';');
+            let conInfo = col1.replace('_',' ') + ;
+            
+        };
+        
+        
+
+        /*for (const flight of flights) {
+  const [status, from, to, time] = flight.split(";"); // Dividir a información do voo en partes
+  const formattedTime = time.replace(":", "h"); // Formatear a hora
+  const formattedInfo = `${status.replace("_", " ")} from ${from} to ${to} (${formattedTime})`; // Crear a cadea formatada
+  console.log(formattedInfo.padEnd(47)); // Mostrar a cadea formatada con aliñamento á dereita
+}
+    */
+    </script>
+</body>
+</html>
