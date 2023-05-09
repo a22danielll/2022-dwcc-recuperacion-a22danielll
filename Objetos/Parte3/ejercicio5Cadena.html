@@ -10,12 +10,17 @@
     <script>
         const flightsInfo ="_Delayed_Departure;scq93766109;bio2133758440;11:25+_Arrival;bio0943384722;scq93766109;11:45+_Delayed_Arrival;svq7439299980;scq93766109;12:05+_Departure;scq93766109;svq2323639855;12:30";
         
-        let info = flightsInfo.split('+_');
+        let info = flightsInfo.split('+');
 
         for(let cadena of info){
             let [col1,col2,col3,col4]=cadena.split(';');
-            let conInfo = col1.replace('_',' ') + ;
+            col1= col1.replace('_',' ') ;
+            col2 = col2.slice(0,3);
             
+            col3 = col3.slice(0,3);
+            let tiempo = col4.replaceAll(';','h');
+            let encadenamiento = col1+' '+col2+' '+col3+' '+tiempo;
+            console.log(encadenamiento.padStart(35));            
         };
         
         
