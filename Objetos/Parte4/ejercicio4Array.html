@@ -8,7 +8,15 @@
 </head>
 <body>
     <script>
-        
+        function palabras(texto){
+            let letras = texto.toLowerCase().split(" ");
+            for (let i = 0; i < letras.length; i++) {
+                
+                letras[i]=letras[i].charAt(0).toUpperCase()+ letras[i].slice(1);
+            }
+            return letras.join(" ");
+        }
+        console.log(palabras('hola que tal'));
     </script>
 </body>
 </html>

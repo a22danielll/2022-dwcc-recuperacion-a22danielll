@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const players = [
+        [
+          "Neuer",
+          "Pavard",
+          "Martinez",
+          "Alaba",
+          "Davies",
+          "Kimmich",
+          "Goretzka",
+          "Coman",
+          "Muller",
+          "Gnarby",
+          "Lewandowski",
+        ],
+        [
+          "Burki",
+          "Schulz",
+          "Hummels",
+          "Akanji",
+          "Hakimi",
+          "Weigl",
+          "Witsel",
+          "Hazard",
+          "Brandt",
+          "Sancho",
+          "Gotze",
+        ],
+      ];
+
+      console.log(
+        "a. Crea as variables players1, players2 que conteña un array cos xogadores de cada equipo" +
+          "\n Equipo1: " +
+          players[0] +
+          "\n Equipo2: " +
+          players[1]
+      );
+
+      console.log(
+        "b. O primeiro xogador do array é o porteiro e o resto son xogadores de campo." +
+          "Crea unha variable chamada gk que conteña o porteiro do primeiro equipo e" +
+          "unha variable de tipo array chamada fieldPlayers que conteña o resto de" +
+          "xogadores do equipo.  " +
+          "\n "
+      );
+      let gk = players[0];
+      console.log(
+        "Portero: " +
+          players[0].slice("0", "1") +
+          ",\n Los demas jugadores: " +
+          players[0].slice(1)
+      );
+
+      console.log(
+        "\n c.Crea un array allPlayers que conteña os xogadores dos dous equipos"
+      );
+      let allPlayers = players[0].concat(players[1]);
+      console.log(allPlayers);
+      console.log(
+        "\n d. O primeiro equipo substituiu os xogadores iniciais por 'Thiago', 'Coutinho', 'Periscic'. Crea unha nova varible de tipo array chamada players1Final que conteña os xogadores iniciais e tamén os 4 novos."
+      );
+      let players1 = [
+        players[0].concat(players[1]).slice(0, 1),
+        "Thiago",
+        "Coutinho",
+        "Periscic",
+        players[0].concat(players[1]).splice(1)
+      ];
+      console.log(players1);
+    </script>
+  </body>
+</html>

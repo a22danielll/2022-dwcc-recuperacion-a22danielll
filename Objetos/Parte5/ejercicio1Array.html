@@ -8,14 +8,17 @@
 </head>
 <body>
     <script>
-        let notas = [4,8,3,10,5];
-        function ordenar(notas){
-            notas = notas.sort((a,b)=>{
-                return a-b ;
-            });
-            console.log(notas);
-        }
-        ordenar(notas);
+        let dSemana = [
+        "domingo",
+        "lunes",
+        "martes",
+        "miercoles",
+        "jueves",
+        "viernes",
+        "sabado",
+      ];
+
+      console.log( dSemana.filter(dia => dia.startsWith("m")));
     </script>
 </body>
 </html>
