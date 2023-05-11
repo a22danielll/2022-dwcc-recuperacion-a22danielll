@@ -8,7 +8,16 @@
 </head>
 <body>
     <script>
+        let frutas = ['peras', 'mazás', 'kiwis', 'plátanos', 'mandarinas'];
         
+        console.log('a. Elimina las manzanas:'  +frutas.splice(1, 1));
+        console.log(frutas);
+
+        console.log('b. Engade detrás dos plátanos, laranxas e sandía' + frutas.splice(3,0,'laranxa','sandia'));
+        console.log(frutas);
+
+        console.log('c. Quita os kiwis e pon no seu lugar cereixas e nésperas' + frutas.splice(1,1,'cereais','nesperas'));
+        console.log(frutas);
     </script>
 </body>
 </html>
