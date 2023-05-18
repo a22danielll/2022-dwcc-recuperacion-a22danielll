@@ -8,7 +8,20 @@
 </head>
 <body>
     <script>
-        
+        function convertirACamelCase(array) {
+            for (let i = 0; i < array.length; i++) {
+                let palabras = array[i].trim().toLowerCase().split("_");
+
+                for (let j = 0; j < palabras.length; j++) {
+                    palabras[j] = palabras[j][0].toUpperCase() + palabras[j].slice(1);
+                }
+                let camelCase = palabras.join("");
+                console.log(camelCase);
+            }
+        }
+
+        let variables = ["first_name", " last_NAME"];
+        convertirACamelCase(variables);
     </script>
 </body>
 </html>

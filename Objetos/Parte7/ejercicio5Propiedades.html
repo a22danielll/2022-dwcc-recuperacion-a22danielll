@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [
+            "car",
+            "car",
+            "truck",
+            "truck",
+            "bike",
+            "walk",
+            "car",
+            "van",
+            "bike",
+            "walk",
+            "car",
+            "van",
+            "car",
+            "truck",
+            "pogostick",
+        ];
+
+        let count = {};
+        data.forEach(transport => {
+          if (count[transport]) {
+            count[transport] += 1;
+          } else {
+            count[transport] = 1;
+          }
+        });
+        console.log("Obxecto co número de veces que se repite cada medio de transporte:", count);
+    </script>
+</body>
+</html>
