@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('ejercicio 1');
+        class Produto {
+            constructor(marca, categoria, unidades, precio) {
+                this.marca = marca;
+                this.categoria = categoria;
+                this.unidades = unidades;
+                this.precio = precio;
+              }
+          
+              importe() {
+                return this.unidades * this.precio;
+              }
+          
+              getInfo() {
+                const importeTotal = this.importe();
+                return `${this.categoria}(${this.marca}) : ${this.unidades}x${this.precio} = ${importeTotal}`;
+              }
+            }
+
+            const produto1 = new Produto("Marca1", "Categoria1", 7, 10);
+
+            console.log(produto1.getInfo());
+
+
+        console.log('\n Ejercicio 2 \n');
+        
+        class Televisor extends Produto{
+            tamanho;
+            constructor(marca,categoria,unidades,precio,tamanho){
+                super(marca,categoria,unidades,precio);
+                this.tamanho = tamanho
+            }
+            getInfo(){
+                return `${super.getInfo()}, Tamanho: ${this.tamanho}`;
+            }
+        }
+
+        let televisor = new Televisor('LG','TV',7,15,'50 pulgadas');
+        console.log(televisor.getInfo());
+
+
+
+        console.log('\n Ejercicio3: \n');
+
+        let array1 = [new Produto('m1','ropa1',5,20),
+            new Produto('m2','ropa2',6,18),
+            new Produto('m3','ropa3',3,15),
+            new Produto('m4','ropa4',8,9),
+            new Produto('m5','ropa5',2,11)];
+
+        
+        console.log('\n Parte a: \n');
+
+        function productoOrderAlfabetico(productos){
+            return productos.slice().sort((a,b)=>a.categoria.localeCompare(b.categoria));
+        }
+        console.log(productoOrderAlfabetico(array1));
+
+        console.log('\n Parte b: \n');
+        function prodMayorMenor(productos){
+            return productos.slice().sort((a,b)=>b.importe() - a.importe());
+        }
+        console.log(prodMayorMenor(array1));
+
+
+        console.log('\n Parte c: \n');
+        
+        console.log('\n Parte d: \n');
+        console.log('\n Parte e: \n');
+    </script>
+</body>
+</html>
