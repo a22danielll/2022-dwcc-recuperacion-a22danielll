@@ -53,30 +53,48 @@
         console.log('\n Ejercicio3: \n');
 
         let array1 = [new Produto('m1','ropa1',5,20),
-            new Produto('m2','ropa2',6,18),
-            new Produto('m3','ropa3',3,15),
+            new Produto('m2','ropa2',6,18.4),
+            new Produto('m3','ropa3',3,15.3),
             new Produto('m4','ropa4',8,9),
             new Produto('m5','ropa5',2,11)];
 
         
         console.log('\n Parte a: \n');
 
-        function productoOrderAlfabetico(productos){
+        function prodsSortByCategory(productos){
             return productos.slice().sort((a,b)=>a.categoria.localeCompare(b.categoria));
         }
-        console.log(productoOrderAlfabetico(array1));
+        console.log(prodsSortByCategory(array1));
 
         console.log('\n Parte b: \n');
-        function prodMayorMenor(productos){
+        function prodsSortByPrice(productos){
             return productos.slice().sort((a,b)=>b.importe() - a.importe());
         }
-        console.log(prodMayorMenor(array1));
+        console.log(prodsSortByPrice(array1));
 
 
         console.log('\n Parte c: \n');
-        
+        function prodsTotalPrice(array){
+            let importeTotal = array.reduce((total,p) => total + p.importe(),0);
+            return importeTotal.toFixed(2);
+        }
+        console.log(prodsTotalPrice(array1));
         console.log('\n Parte d: \n');
+        function prodsWithLowUnits(productos,unid){
+            return productos.filter((p) => p.unidades < unid);
+        }
+        console.log(prodsWithLowUnits(array1,5));
         console.log('\n Parte e: \n');
+        function prodsList(productos){
+            let lista = 'Listado de produtos: ';
+            productos.forEach(p => lista+= 'Nombre: ' + p.marca + ' Categoria: ' + p.categoria +
+                ' Unidad: ' + p.unidades + ' Precio: ' + p.precio + '\n'
+                
+            );
+            return lista;
+        }
+
+        console.log(prodsList(array1));
     </script>
 </body>
 </html>
