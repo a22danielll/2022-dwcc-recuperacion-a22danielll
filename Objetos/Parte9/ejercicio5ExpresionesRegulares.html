@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        let minimo = new RegExp(/w{8,}/);
+        let minimo = new RegExp(/\w{8,}/);
         let noEspacios= new RegExp(/^\s/);
         let mayusculas = new RegExp(/A-Z/);
         let minusculas = new RegExp(/a-z/);
@@ -17,15 +17,71 @@
 
         function comprobacionPassword(contraseña){
             let count =0;
-            let verificado = true;
+            let valido = true;
             if(minimo.test(contraseña)){
-                verificado == true;
+                valido == true;
                 return 'el numero minimo de caracteres es correcto';
             }else{
-                verificado == false;
+                valido == false;
                 return 'El numero minimo de caracteres es incorrecto';
             }
+            if(noEspacios.test(contraseña)){
+                valido == true;
+                console.log('la contraseña es correcta no tiene espacios en su contenido');
+            }else{
+                valido == false;
+                console.log('la contraseña es incorresta, no debe tener esacios');
+            }
+            if(mayusculas.test(contraseña)){
+                if(count >= 3){
+                    count++;
+                    valido== true;
+                }else{
+                    valido==false;
+                    console.log('La contraseña debe tener por lo menos 3 caracteres mayusculas');
+                }
+            }else{
+                valido == false;
+                console.log('la contraseña es incorresta, debe tener caracetres mayusculas');
+            }
+            if(minusculas.test(contraseña)){
+                if(count >= 3){
+                    count++;
+                    valido== true;
+                }else{
+                    valido==false;
+                    console.log('La contraseña debe tener por lo menos 3 caracteres minusculas');
+                }
+            }else{
+                valido == false;
+                console.log('la contraseña es incorresta, debe tener caracetres minusculas');
+            }
+            if(numeros.test(contraseña)){
+                if(count >= 3){
+                    count++;
+                    valido== true;
+                }else{
+                    valido==false;
+                    console.log('La contraseña debe tener por lo menos 3 caracteres numericos');
+                }
+            }else{
+                valido == false;
+                console.log('la contraseña es incorresta, debe tener caracetres numericos');
+            }
+            if(caracteresEspeciales.test(contraseña)){
+                if(count >= 3){
+                    count++;
+                    valido== true;
+                }else{
+                    valido==false;
+                    console.log('La contraseña debe tener por lo menos 3 caracteres caracteres espaciales');
+                }
+            }else{
+                valido == false;
+                console.log('la contraseña es incorresta, debe tener caracetres caracteres especiales');
+            }
         }
+        console.log(comprobacionPassword("abc123ABC..."));
     </script>
 </body>
 </html>

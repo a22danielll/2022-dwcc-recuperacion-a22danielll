@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let insultos = ["testán", "langrán", "fervellasverzas", "baldreo", "lacazán", "pillabán"];
+        function substituir(texto) {
+          insultos.forEach(insulto => {
+            let palabra = insulto.charAt(0) + '*'.repeat(insulto.length - 1);
+            const expresion = new RegExp(`\\b${insulto}\\b`,'gi');
+            texto = texto.replace(expresion, palabra);
+          });
+      
+          return texto;
+        }
+
+        
+        const texto = 'eres un pillabán';
+         
+        console.log(substituir(texto));
+        
+        
+    </script>
+</body>
+</html>
