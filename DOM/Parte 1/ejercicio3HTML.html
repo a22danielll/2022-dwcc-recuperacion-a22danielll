@@ -45,12 +45,12 @@
         </tr>
       </table>
     <script>
-        let tabla1 = document.body.children['tabla'];
-        console.log(tabla1);
-        let filas = tabla1.rows.length;
+        let tabla = document.body.children['tabla'];
+        console.log(tabla);
+        let filas = tabla.rows.length;
         for (let i = 0; i < filas; i++) {
-            console.log(table1.rows[i].cells[i]);
-            tabla1.rows[i].cells[i].style.backgroundcolor = 'red';
+            console.log(table.rows[i].cells[i]);
+            tabla.rows[i].cells[i].style.backgroundcolor = 'red';
             
         }
     </script>
