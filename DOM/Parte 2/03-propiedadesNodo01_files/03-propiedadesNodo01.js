@@ -1,0 +1,16 @@
+let label = document.getElementsByTagName('label')[3];
+let label2 = label.innerHTML;
+console.log(label2);
+let anterior = label.previousElementSibling;
+let anterior2 = anterior.textContent; 
+console.log(anterior2);
+let input = document.querySelector("input[name='sexo']").value;
+console.log(input);
+let input2 = document.querySelector("input[name='sexo']:checked").value;
+console.log(input2);
+let li = document.querySelectorAll('li');
+li.forEach(l=>{console.log(l.textContent);});
+let cantidad = li.length;
+console.log(cantidad);
+let atributo = document.querySelector("[data-widget-name='contedor']").getAttribute('data-widget-name');
+console.log(atributo);
