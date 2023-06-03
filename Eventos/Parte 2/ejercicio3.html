@@ -55,7 +55,11 @@
     <script>
       let tabla = document.getElementById('grid');
       tabla.addEventListener('click', function(e){
-         
+         if(e.target.tagName=='th'){
+          let dataType = e.target.getAttribute('data-type');
+          let columna = Array.from(e.target.parentNode.children).indexOf(e.tarjet);
+          
+        }
       })
     </script>
   </body>
